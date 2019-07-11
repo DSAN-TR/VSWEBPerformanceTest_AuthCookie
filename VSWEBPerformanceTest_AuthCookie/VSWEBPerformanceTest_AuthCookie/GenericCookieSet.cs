@@ -1,7 +1,9 @@
 ﻿using Microsoft.VisualStudio.TestTools.WebTesting;
+using System.ComponentModel;
 
 namespace VSWEBPerformanceTest_AuthCookie
 {
+    [Description("This plugin can be used to set cookies for each request")]
     public class GenericCookieSet : WebTestPlugin
     {
         public string Name { get; set; }
