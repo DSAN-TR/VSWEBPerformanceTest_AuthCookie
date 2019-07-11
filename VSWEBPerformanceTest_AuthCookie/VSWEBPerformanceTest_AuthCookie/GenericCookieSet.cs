@@ -3,6 +3,7 @@ using System.ComponentModel;
 
 namespace VSWEBPerformanceTest_AuthCookie
 {
+    [DisplayName("Generic Cookie")]
     [Description("This plugin can be used to set cookies for each request")]
     public class GenericCookieSet : WebTestPlugin
     {
