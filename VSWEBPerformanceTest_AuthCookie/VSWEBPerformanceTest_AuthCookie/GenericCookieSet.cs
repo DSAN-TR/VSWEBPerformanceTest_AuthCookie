@@ -13,7 +13,12 @@ namespace VSWEBPerformanceTest_AuthCookie
 
         public override void PreRequest(object sender, PreRequestEventArgs e)
         {
-            e.Request.Cookies.Add(new System.Net.Cookie(Name, Value, Path, Domain));
+            if (!string.IsNullOrEmpty(Domain))
+            {
+                e.Request.Cookies.Add(new System.Net.Cookie(Name, Value, Path, Domain));
+            }
+
+            e.Request.Cookies.Add(new System.Net.Cookie(Name, Value, Path));
         }
     }
 }
